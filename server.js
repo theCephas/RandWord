@@ -34,7 +34,7 @@ app.get("/start", async function(req, res){
 })
 
 app.post("/search", async function(req, res){
-    const wordToSearch = req.body.search
+    const wordToSearch = lodash.lowerCase(req.body.search)
     try{
     const data = await fetch(`http://api.wordnik.com/v4/word.json/${wordToSearch}/definitions?api_key=t753bhr6xyoypmnq4pmx5z20l46bw242vulnm7ihx75dtp4sj`)
     const jsonData = await data.json()

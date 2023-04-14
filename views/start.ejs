@@ -29,11 +29,12 @@
     <div id="popup-container" style="display: none;">
         <div id="popup-content">
           <p>Your word for the day is: <%=word%> </p>
+          <p>Transcription: <%=transcription.raw%></p>
           <%dicWord.definitions.forEach(function(wordType){%>
            <p>Part of Speech: <%=lodash.upperFirst(wordType.partOfSpeech)%></p> 
-           <p>Definition: <%=wordType.text%></p>
+           <p>Definition: <%-wordType.text%></p>
            <%})%> 
-           <p>Transcription: <%=transcription.raw%></p>
+           
           <div id="btn">
             <button id="close-btn">Close</button>
           </div>
@@ -47,7 +48,7 @@
         <div id="search">
           <form action="/search" method="post">
             <label for="Search">Search for a new word:</label>
-            <input name="search" type="text" placeholder="e.g 'Obscure'">
+            <input required name="search" type="text" placeholder="e.g 'Obscure'">
             <button type="submit" class="submit-btn" onclick="pop()">Submit</button>
           </form>
         </div>
