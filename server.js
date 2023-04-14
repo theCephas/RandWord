@@ -47,9 +47,8 @@ app.post("/search", async function(req, res){
     const word = lodash.upperFirst(wordToSearch)
     res.render("search", {word:word, dicWord:jsonData, transcription:transcription})
         
-        // res.render("start", {word:jsonData})
-        }catch(e){
-            console.log(e)
+    }catch(e){
+        console.log(e)
     }
 })
 
