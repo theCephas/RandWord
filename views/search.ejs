@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Random Word</title>
+    <link rel="icon"  type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<body class="container">
+    
+
+    <div class="title">
+
+        <img src="./images/sand-clock.png" alt="Icon" width="64px">
+        <h1>RandWord</h1>
+
+</div>
+
+
+
+        <div >
+          <div>
+            <p>Word: <%=word%></p>
+            
+            <p>Transcription: <%=transcription.raw%></p>
+            <%dicWord.forEach(function(wordType){%>
+            
+              <p>Part of Speech:  <%=wordType.partOfSpeech%></p>
+              <p>Definition: <%=wordType.text%></p>
+          
+             <%})%>
+             <div id="btn">
+              <a href="/start"><button id="close-btn">Close</button></a>
+            </div>
+          </div>
+        </div>
+        
+      
+      <footer>
+        <p>Made with ❤️ by <a href="https://github.com/theCephas">Iseoluwa</a> & <a href="https://github.com/greatseun02">Seun</a> <a href="https://github.com/theCephas/RandWord"><img src="./images/github.png" alt=""></a> </p> 
+    </footer>
+
+      <script src="/index.js"></script>
+</body>
+</html>
