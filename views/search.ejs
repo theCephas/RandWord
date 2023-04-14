@@ -14,7 +14,7 @@
   
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 </head>
-<body class="container">
+<body class="container search-pg">
     
 
     <div class="title">
@@ -27,19 +27,20 @@
 
 
         <div >
-          <div>
-            <p>Word: <%=word%></p>
+          <div> <hr>
+            <p>WORD: <%=word%></p>
             
-            <p>Transcription: <%=transcription.raw%></p>
+            <p>TRANSCRIPTION: <%=transcription.raw%></p>
             <%dicWord.forEach(function(wordType){%>
             
-              <p>Part of Speech:  <%=wordType.partOfSpeech%></p>
-              <p>Definition: <%=wordType.text%></p>
+              <p>PART OF SPEECH:  <%=wordType.partOfSpeech%></p>
+              <p>DEFINITION: <%=wordType.text%></p> <hr>
           
              <%})%>
-             <div id="btn">
-              <a href="/start"><button id="close-btn">Close</button></a>
-            </div>
+             
+          </div>
+          <div id="btn">
+            <a href="/start"><button id="close-btn">Close</button></a>
           </div>
         </div>
         
