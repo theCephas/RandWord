@@ -36,11 +36,11 @@ app.get("/start", async function(req, res){
 app.post("/search", async function(req, res){
     const wordToSearch = lodash.lowerCase(req.body.search)
     try{
-    const data = await fetch(`http://api.wordnik.com/v4/word.json/${wordToSearch}/definitions?api_key=t753bhr6xyoypmnq4pmx5z20l46bw242vulnm7ihx75dtp4sj`)
+    const data = await fetch(`http://api.wordnik.com/v4/word.json/${wordToSearch}/definitions?api_key=t753bhr6xyoypmnq4pmx5z20l46bw242vulnm7ihx75dtp4sj&sourceDictionaries=wiktionary`)
+    const jsonData = await data.json()
     if(data.status == 404){
         res.send("ERROR WORD NOT FOUND")
     }
-    const jsonData = await data.json()
     const pronounciationOfSearchWord = await fetch(`http://api.wordnik.com/v4/word.json/${wordToSearch}/pronunciations?api_key=t753bhr6xyoypmnq4pmx5z20l46bw242vulnm7ihx75dtp4sj`)
     let transcription = await pronounciationOfSearchWord.json()
     transcription = transcription[transcription.length-1]
@@ -49,7 +49,7 @@ app.post("/search", async function(req, res){
         
     }catch(e){
         console.log(e)
-    }
+}
 })
 
 app.listen(3000, console.log("rest"))
