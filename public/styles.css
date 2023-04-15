@@ -142,7 +142,7 @@ h1{
 
 }
 input{
-  width: 30rem;
+  width: 25rem;
 }
 #popup-container {
     position: fixed;
@@ -166,7 +166,7 @@ input{
     left: 50%;
     transform: translate(-50%, -50%);
     align-self: center;
-    width: 50%;
+    width: 32rem;
     font-size: 1.5rem;
   }
   .popup-search{
@@ -221,7 +221,7 @@ hr{
   background-color: red;
 }
 #wordSection{
-  width: 35rem;
+  width: 32rem;
   box-shadow: 2px 6px 17px #b2bac0;
   border-radius: 20px;
   margin: auto;
