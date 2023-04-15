@@ -39,10 +39,94 @@
 .title{
     display: flex;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     justify-content: center;
+}
+.images{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 25px;
+
+}
+.icon1{
+  position: relative;
+}
+.icon1:hover:after{
+  content: "Home/Doc";
+  position: absolute;
+  bottom: -50px;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.icon1:hover:before {
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+}
+.icon2{
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.icon2:hover:after{
+  content: "Word of the day";
+  position: absolute;
+  bottom: -50px;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.icon2:hover:before {
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+}
+.icon3{
+  position: relative;
+}
+.icon3:hover:after{
+  content: "GitHub";
+  position: absolute;
+  bottom: -50px;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.icon3:hover:before {
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
 }
 h1{
     padding-top: 9px;

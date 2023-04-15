@@ -14,3 +14,5 @@ document.getElementById('close-btn').addEventListener('click', function() {
 function pop(){
   document.querySelector('.popup-search').style.display='block';
 }
+
+
