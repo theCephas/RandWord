@@ -1,11 +1,14 @@
-const express = require("express")
-const app = express()
-const ejs = require("ejs")
-const bodyParser = require("body-parser")
-const lodash = require("lodash") 
+import express from "express";
+import fetch from 'node-fetch';
+const app = express();
+import ejs from "ejs";
+import bodyParser from "body-parser";
+import lodash from "lodash"
 app.locals.lodash = lodash;
 app.use(bodyParser.urlencoded({extended:true}))
-const { json } = require("body-parser")
+import json from "body-parser"
+
+// const { json } = require("body-parser")
 app.set("view engine", "ejs")
 app.use(express.static("public"))
 
@@ -52,4 +55,4 @@ app.post("/search", async function(req, res){
 }
 })
 
-app.listen(3000, console.log("rest"))
+app.listen(process.env.PORT || 3000, console.log("rest"))
