@@ -258,6 +258,32 @@ input{
   background-color: #b2bac0;
   color: #0a2342;
 }
+.errorEffect{
+  display: flex;
+  justify-content: space-around;
+}
+.errorEffect > p{
+  font-size: 3rem;
+  width: 300px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 570px){
+  .errorEffect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+  }
+  .errorEffect > img{
+    display: flex;
+    align-self: center;
+  }
+  .errorEffect > p{
+    text-align: center;
+    width: auto;
+  }
+}
 footer{
   text-align: center;
   margin-top: 40px;
