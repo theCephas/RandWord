@@ -52,4 +52,4 @@ app.post("/search", async function(req, res){
 }
 })
 
-app.listen(3000, console.log("rest"))
+app.listen(process.env.PORT || 3000, console.log("rest"))
