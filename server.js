@@ -26,8 +26,14 @@ app.get("/start", async function(req, res){
         const data = await fetch(`http://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${process.env.API_KEY}`)
         const jsonData = await data.json() 
         const pronounciationOfRandWord = await fetch(`http://api.wordnik.com/v4/word.json/${jsonData.word}/pronunciations?api_key=${process.env.API_KEY}`)
-        let transcription = await pronounciationOfRandWord.json()
-        transcription = transcription[transcription.length-1]
+        var transcription = await pronounciationOfRandWord.json()
+        if(transcription.statusCode == 404){
+            transcription = {
+                raw:"No transcription found."
+            }
+        }else{
+            transcription = transcription[transcription.length-1]
+        }
         const word = lodash.upperFirst(jsonData.word)
         res.render("start", {word:word, dicWord:jsonData, transcription:transcription})
         }catch(e){
